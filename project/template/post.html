@@ -1,0 +1,46 @@
+{%extends "base.html"%}
+{%block title %} edit post{% endblock %}
+{%block head%}
+
+<style>
+    .form-control,
+    .title {
+        outline: none;
+        border: none;
+        border-bottom: 3px solid orange;
+    }
+</style>
+
+{%endblock%}
+{%block body %}
+
+<nav class="navbar bg-light">
+    <div class="container-fluid">
+        <div class="box"><img src="https://img.icons8.com/material-rounded/24/null/left.png" style="padding-right:20px"
+                height="25px" width="40px" /><a class="navbar-brand" href="#">Logo </a></div>
+    </div>
+</nav>
+
+<section class="container-fluid bg-gray">
+    <div class="container mb-2 ">
+        <div class="input-group input-group-lg">
+            <input type="text" class="form-control title" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-lg" placeholder="Title">
+        </div>
+    </div>
+</section>
+
+<div class="conatiner-fluid ">
+    <div class="bg-dark p-3">{{ckeditor.load()}}</div>
+
+</div>
+
+<section class="container">
+    <div class="input-group">
+        <textarea class="form-control" rows="10" type="textarea"></textarea>
+    </div>
+
+</section>
+
+
+{%endblock%}
