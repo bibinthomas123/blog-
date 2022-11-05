@@ -1,6 +1,6 @@
-from flask import Blueprint,render_template
+from flask import Blueprint,render_template,request
 from pymongo import MongoClient
-from flask_ckeditor import CKEditor
+from flask_ckeditor import CKEditorField
 
 
 
@@ -25,8 +25,15 @@ def about():
     return render_template("about.html")
 
 
+@views.route("/post")
+def possts():
+
+    # post = posts.find(post_id).limit(1)
+
+    return render_template("single_post.html")
+
 @views.route("/edit-posts")
 def edit_posts():
-
+    # body = CKEditorField("body")
 
     return render_template("post.html")

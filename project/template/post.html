@@ -20,27 +20,27 @@
                 height="25px" width="40px" /><a class="navbar-brand" href="#">Logo </a></div>
     </div>
 </nav>
-
-<section class="container-fluid bg-gray">
-    <div class="container mb-2 ">
-        <div class="input-group input-group-lg">
-            <input type="text" class="form-control title" aria-label="Sizing example input"
-                aria-describedby="inputGroup-sizing-lg" placeholder="Title">
+<form action="post">
+    <section class="container-fluid bg-gray">
+        <div class="container mb-2 ">
+            <div class="input-group input-group-lg">
+                <input type="text" class="form-control title" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-lg" placeholder="Title">
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<div class="conatiner-fluid ">
-    <div class="bg-dark p-3">{{ckeditor.load()}}</div>
+    <div class="conatiner-fluid ">
+        <div class="p-3">{{ ckeditor.load()}} {{ckeditor.config(name="body")}}</div>
 
-</div>
-
-<section class="container">
-    <div class="input-group">
-        <textarea class="form-control" rows="10" type="textarea"></textarea>
     </div>
 
-</section>
+    <section class="container">
+        <div class="input-group">
+            <textarea class="form-control" rows="10" type="textarea"></textarea>
+        </div>
 
+    </section>
+</form>
 
 {%endblock%}
